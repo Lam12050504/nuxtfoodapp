@@ -49,10 +49,11 @@ nav {
 .row {
   margin: 30px 0 60px;
   width: 100%;
+  height:100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 30px;
+  grid-column-gap: 30px;  
   grid-row-gap: 0px;
 }
 
@@ -61,14 +62,14 @@ nav {
 button {
   background: #098191;
   transition: background ease 0.25s;
-  border-radius: 5px;
+  border-radius: 10px;
   display: inline-block;
   border: none;
   padding: 0.75rem 1.5rem;
   margin: 0;
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   cursor: pointer;
   text-align: center;
   -webkit-appearance: none;
@@ -314,6 +315,7 @@ section.restaurantinfo {
   padding: 20px 200px;
 
   .items {
+    width: 250px;
     height: 250px;
     border-radius: 5px;
     background-size: cover;
