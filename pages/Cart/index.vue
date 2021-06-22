@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in cart" :key="item.id">
+          <tr v-for="(item,idx) in cart" :key="idx">
             <td>
               {{ item.item }}
               <span v-if="item.options">- {{ item.options }}</span>
@@ -32,6 +32,7 @@
           </tr>
         </tbody>
       </table>
+      <button @click="deleteCart()">Delete Cart</button>
     </section>
 
     <Cart v-else />
@@ -52,6 +53,11 @@ export default {
     totalPrice() {
       return this.$store.getters.totalPrice;
     }
+  },
+  methods: {
+      deleteCart() {
+          this.$store.commit('deleteCart',this.idx)
+      }
   }
 };
 </script>

@@ -15,8 +15,11 @@ export const mutations = {
     state.fooddata = data;
   },
   addToCart: (state, formOutPut) => {
-    formOutPut.id = uuidv4()
+    formOutPut.id = uuidv4
     state.cart.push(formOutPut)
+  },
+  deleteCart: (state, idx) => {
+    state.cart.splice(idx)
   }
 };
 
