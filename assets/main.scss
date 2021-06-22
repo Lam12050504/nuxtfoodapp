@@ -196,7 +196,7 @@ table th {
     font-size: 1.3em;
   }
 
-  table thead {
+  table head {
     border: none;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -294,9 +294,8 @@ table th {
 
 .restaurant {
   .restaurantheading {
-    margin: 100px 0 20px 200px;
+    margin: 100px ;
     display: flex;
-    align-items: center;
   }
 
   h1 {
@@ -313,7 +312,7 @@ table th {
 
 section.restaurantinfo {
   padding: 20px 200px;
-
+  margin-bottom: 10px;
   .items {
     width: 250px;
     height: 250px;
@@ -321,6 +320,7 @@ section.restaurantinfo {
     background-size: cover;
     position: relative;
     box-shadow: 2px 6px 6px 0 rgb(215, 215, 215);
+    top: -60px;
   }
 
   .iteminfo {

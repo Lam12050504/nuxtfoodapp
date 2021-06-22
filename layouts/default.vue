@@ -2,7 +2,6 @@
 <div>
   <div class="content">
     <AppMenu/>
-
     <Nuxt />
   </div>
 </div>

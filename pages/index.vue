@@ -1,18 +1,22 @@
 <template>
-  <main class="container">
+  <main class="container restaurant">
       <AppHead />
-      <app-restaurant-inf />
+      <AppRestaurantInf :datasource="fooddata" />
   </main>
 </template>
 
 <script>
 import AppHead from '../components/AppHead.vue';
 import AppRestaurantInf from '../components/AppRestaurantInf.vue';
+import {mapState} from "vuex";
 export default {
   components: {
     AppHead,
     AppRestaurantInf
-  }
+  },
+  computed:{
+    ...mapState(['fooddata'])
+    }
 }
 </script>
 
