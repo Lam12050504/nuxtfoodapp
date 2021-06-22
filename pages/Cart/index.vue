@@ -32,7 +32,7 @@
           </tr>
         </tbody>
       </table>
-      <button @click="deleteCart()">Delete Cart</button>
+     <button @click="deleteCart">Delete Cart</button>
     </section>
 
     <Cart v-else />
