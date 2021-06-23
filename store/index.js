@@ -2,12 +2,16 @@ import {v4 as uuidv4} from 'uuid';
 export const state = () => ({
   fooddata: [
   ],
-  cart: []
+  cart: [],
 })
 export const getters = {
   totalPrice: state => {
     if (!state.cart.length) return 0;
     return state.cart.reduce((ac, next) => ac + +next.combinedPrice, 0);
+  },
+  updateCount: state => {
+    if (!state.cart.length) return 0;
+    return state.cart.reduce((ac, next) => ac + +next.count, 0);
   }
 }
 export const mutations = {
@@ -20,7 +24,7 @@ export const mutations = {
   },
   deleteCart: (state, idx) => {
     state.cart.splice(idx)
-  }
+  },
 };
 
 export const actions = {

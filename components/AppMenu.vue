@@ -8,12 +8,19 @@
         <nuxt-link to="/restaurant/Restaurant">Restaurant</nuxt-link>
       </li> 
     </ul>
-    <nuxt-link to="/Cart">Cart</nuxt-link>
+    <nuxt-link to="/Cart">Cart-{{updateCount}}</nuxt-link>
   </nav>
 </template>
 
 <script>
-export default {};
+import {mapState} from 'vuex';
+import {mapGetters} from 'vuex';
+export default {
+  computed: {
+    ...mapState(['cart','count']),
+    ...mapGetters(['updateCount'])
+  },
+};
 </script>
 
 <style lang="scss" scoped></style>
